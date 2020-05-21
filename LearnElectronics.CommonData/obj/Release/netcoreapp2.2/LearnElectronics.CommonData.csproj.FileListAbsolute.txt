@@ -1,0 +1,9 @@
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.CommonData\bin\Release\netcoreapp2.2\LearnElectronics.CommonData.deps.json
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.CommonData\bin\Release\netcoreapp2.2\LearnElectronics.CommonData.dll
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.CommonData\bin\Release\netcoreapp2.2\LearnElectronics.CommonData.pdb
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.CommonData\obj\Release\netcoreapp2.2\LearnElectronics.CommonData.csproj.CoreCompileInputs.cache
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.CommonData\obj\Release\netcoreapp2.2\LearnElectronics.CommonData.AssemblyInfoInputs.cache
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.CommonData\obj\Release\netcoreapp2.2\LearnElectronics.CommonData.AssemblyInfo.cs
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.CommonData\obj\Release\netcoreapp2.2\LearnElectronics.CommonData.dll
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.CommonData\obj\Release\netcoreapp2.2\LearnElectronics.CommonData.pdb
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.CommonData\obj\Release\netcoreapp2.2\LearnElectronics.CommonData.csprojAssemblyReference.cache
