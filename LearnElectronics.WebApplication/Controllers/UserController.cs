@@ -20,7 +20,7 @@ namespace LearnElectronics.WebApplication.Controllers
         [HttpGet("account")]
         public async Task<IActionResult> GetUserAccount()
         {
-            var userId = Request.Cookies["userId"];
+            var userId = Request.Cookies;
             var response = await _userService.GetUserAccount(Convert.ToInt32(userId));
             if (response.Code <= HttpStatusCode.PermanentRedirect) { return Json(response.Data); }
             else { return BadRequest(); }

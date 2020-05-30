@@ -29,8 +29,16 @@ namespace LearnElectronics.WebApi
         {
             services.InitializeServices();
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer("Server=" + Environment.MachineName + ";Database=LearnElectronics;Integrated Security=True;"));
-            services.AddCors(); // Make sure you call this previous to AddMvc
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder => builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials()
+                    );
+            });
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 
@@ -66,7 +74,7 @@ namespace LearnElectronics.WebApi
 
             app.UseDeveloperExceptionPage();
             app.UseHttpsRedirection();
-            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseMvc(routes =>
