@@ -46,6 +46,7 @@ namespace LearnElectronics.WebApi
             });
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
+            services.AddMvc();
         }
 
         public void Configure(IApplicationBuilder app)
