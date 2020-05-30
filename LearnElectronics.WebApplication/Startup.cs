@@ -31,13 +31,12 @@ namespace LearnElectronics.WebApi
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer("Server=" + Environment.MachineName + ";Database=LearnElectronics;Integrated Security=True;"));
             services.AddCors(options =>
             {
-                options.AddDefaultPolicy(
-                    builder => builder
-                        .AllowAnyOrigin()
-                        .AllowAnyMethod()
-                        .AllowAnyHeader()
-                        .AllowCredentials()
-                    );
+                options.AddPolicy("CorsPolicy",
+                  builder => builder.WithOrigins("http://localhost:3000/")
+                      .AllowAnyMethod()
+                      .AllowAnyHeader()
+                      .AllowCredentials()
+                  );
             });
 
             var mappingConfig = new MapperConfiguration(mc =>
@@ -54,7 +53,7 @@ namespace LearnElectronics.WebApi
 
             app.UseDeveloperExceptionPage();
             app.UseHttpsRedirection();
-            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+            app.UseCors(builder => builder.WithOrigins("CorsPolicy").AllowAnyMethod().AllowAnyHeader().AllowCredentials());
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {
