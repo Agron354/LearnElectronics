@@ -29,15 +29,9 @@ namespace LearnElectronics.WebApi
         {
             services.InitializeServices();
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer("Server=" + Environment.MachineName + ";Database=LearnElectronics;Integrated Security=True;"));
-            services.AddCors(options =>
-            {
-                options.AddDefaultPolicy(
-                  builder => builder
-                      .WithOrigins("http://localhost:3000/")
-                      .AllowAnyMethod()
-                      .AllowAnyHeader()
-                  );
-            });
+            services.AddCors(); // Make sure you call this previous to AddMvc
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 
             var mappingConfig = new MapperConfiguration(mc =>
             {
@@ -45,16 +39,35 @@ namespace LearnElectronics.WebApi
             });
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
-            services.AddMvc();
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
+            services.AddMvc()
+            .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+            .AddDataAnnotationsLocalization();
         }
 
         public void Configure(IApplicationBuilder app)
         {
-            app.UseCookiePolicy();
+
+
+            var supportedCultures = new[]
+             {
+                new CultureInfo("en"),
+                new CultureInfo("ru"),
+            };
+
+            app.UseRequestLocalization(new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture("en"),
+                SupportedCultures = supportedCultures,
+                SupportedUICultures = supportedCultures
+
+            });
+
             app.UseDeveloperExceptionPage();
             app.UseHttpsRedirection();
-            app.UseCors(builder => builder.WithOrigins("http://localhost:3000/").AllowAnyMethod().AllowAnyHeader());
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
             app.UseStaticFiles();
+            app.UseAuthentication();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
