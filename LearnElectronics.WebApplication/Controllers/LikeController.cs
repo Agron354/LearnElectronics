@@ -3,12 +3,14 @@ using System.Net;
 using System.Threading.Tasks;
 using LearnElectronics.Services.Contracts.Models;
 using LearnElectronics.Services.Contracts.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LearnElectronics.WebApplication.Controllers
 {
 
     [ApiController]
+    [EnableCors("CORS")]
     public class LikeController : Controller
     {
 

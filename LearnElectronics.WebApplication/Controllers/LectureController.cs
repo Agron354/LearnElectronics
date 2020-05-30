@@ -2,10 +2,12 @@
 using System.Net;
 using System.Threading.Tasks;
 using LearnElectronics.Services.Contracts.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LearnElectronics.WebApplication.Controllers
 {
+    [EnableCors("CORS")]
     public class LectureController : Controller
     {
         private readonly ILectureService _lectureService;
