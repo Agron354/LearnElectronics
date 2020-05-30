@@ -5,7 +5,6 @@ using LearnElectronics.Services.MappingProfile;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Localization;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -29,9 +28,8 @@ namespace LearnElectronics.WebApi
         {
             services.InitializeServices();
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer("Server=" + Environment.MachineName + ";Database=LearnElectronics;Integrated Security=True;"));
-            services.AddCors(); // Make sure you call this previous to AddMvc
+            services.AddCors();
 
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 
             var mappingConfig = new MapperConfiguration(mc =>
             {
@@ -39,7 +37,6 @@ namespace LearnElectronics.WebApi
             });
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
-            services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.AddMvc()
             .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
             .AddDataAnnotationsLocalization();
@@ -48,32 +45,12 @@ namespace LearnElectronics.WebApi
         public void Configure(IApplicationBuilder app)
         {
 
-
-            var supportedCultures = new[]
-             {
-                new CultureInfo("en"),
-                new CultureInfo("ru"),
-            };
-
-            app.UseRequestLocalization(new RequestLocalizationOptions
-            {
-                DefaultRequestCulture = new RequestCulture("en"),
-                SupportedCultures = supportedCultures,
-                SupportedUICultures = supportedCultures
-
-            });
-
             app.UseDeveloperExceptionPage();
             app.UseHttpsRedirection();
             app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
             app.UseStaticFiles();
             app.UseAuthentication();
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            app.UseMvc();
         }
     }
 }
