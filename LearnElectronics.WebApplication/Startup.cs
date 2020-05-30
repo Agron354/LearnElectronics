@@ -53,7 +53,7 @@ namespace LearnElectronics.WebApi
 
             app.UseDeveloperExceptionPage();
             app.UseHttpsRedirection();
-            app.UseCors(builder => builder.WithOrigins("CorsPolicy").AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {
