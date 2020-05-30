@@ -46,6 +46,8 @@ namespace LearnElectronics.WebApi
 
         public void Configure(IApplicationBuilder app)
         {
+
+
             var supportedCultures = new[]
              {
                 new CultureInfo("en"),

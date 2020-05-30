@@ -3,6 +3,7 @@ using System.Net;
 using System.Threading.Tasks;
 using LearnElectronics.Services.Contracts.Models;
 using LearnElectronics.Services.Contracts.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LearnElectronics.WebApplication.Controllers
@@ -17,9 +18,11 @@ namespace LearnElectronics.WebApplication.Controllers
         }
 
         [HttpGet("account")]
+        [EnableCors]
         public async Task<IActionResult> GetUserAccount()
         {
-            var response = await _userService.GetUserAccount(Convert.ToInt32(Request.Cookies["userId"]));
+            var userId = Request.Cookies["userId"];
+            var response = await _userService.GetUserAccount(Convert.ToInt32(userId));
             if (response.Code <= HttpStatusCode.PermanentRedirect) { return Json(response.Data); }
             else { return BadRequest(); }
         }
