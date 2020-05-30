@@ -18,7 +18,6 @@ namespace LearnElectronics.WebApplication.Controllers
         }
 
         [HttpGet("account")]
-        [EnableCors]
         public async Task<IActionResult> GetUserAccount()
         {
             var userId = Request.Cookies["userId"];
