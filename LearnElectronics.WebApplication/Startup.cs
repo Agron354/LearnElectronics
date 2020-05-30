@@ -40,43 +40,21 @@ namespace LearnElectronics.WebApi
                     );
             });
 
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
-
             var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new MappingProfile());
             });
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
-            services.AddLocalization(options => options.ResourcesPath = "Resources");
-            services.AddMvc()
-            .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
-            .AddDataAnnotationsLocalization();
         }
 
         public void Configure(IApplicationBuilder app)
         {
 
-
-            var supportedCultures = new[]
-             {
-                new CultureInfo("en"),
-                new CultureInfo("ru"),
-            };
-
-            app.UseRequestLocalization(new RequestLocalizationOptions
-            {
-                DefaultRequestCulture = new RequestCulture("en"),
-                SupportedCultures = supportedCultures,
-                SupportedUICultures = supportedCultures
-
-            });
-
             app.UseDeveloperExceptionPage();
             app.UseHttpsRedirection();
             app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
             app.UseStaticFiles();
-            app.UseAuthentication();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
