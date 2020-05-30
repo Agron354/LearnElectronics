@@ -31,11 +31,11 @@ namespace LearnElectronics.WebApi
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer("Server=" + Environment.MachineName + ";Database=LearnElectronics;Integrated Security=True;"));
             services.AddCors(options =>
             {
-                options.AddPolicy("CorsPolicy",
-                  builder => builder.WithOrigins("http://localhost:3000/")
+                options.AddDefaultPolicy(
+                  builder => builder
+                      .WithOrigins("http://localhost:3000/")
                       .AllowAnyMethod()
                       .AllowAnyHeader()
-                      .AllowCredentials()
                   );
             });
 
@@ -50,10 +50,10 @@ namespace LearnElectronics.WebApi
 
         public void Configure(IApplicationBuilder app)
         {
-
+            app.UseCookiePolicy();
             app.UseDeveloperExceptionPage();
             app.UseHttpsRedirection();
-            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+            app.UseCors(builder => builder.WithOrigins("http://localhost:3000/").AllowAnyMethod().AllowAnyHeader());
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {

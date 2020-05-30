@@ -18,7 +18,6 @@ namespace LearnElectronics.WebApplication.Controllers
         }
 
         [HttpGet("account")]
-        [EnableCors("CorsPolicy")]
         public async Task<IActionResult> GetUserAccount()
         {
             var userId = Request.Cookies["userId"];
@@ -28,16 +27,15 @@ namespace LearnElectronics.WebApplication.Controllers
         }
 
         [HttpPost("login")]
-        [EnableCors("CorsPolicy")]
         public async Task<IActionResult> Login([FromBody] LoginUserModel loginModel)
         {
+            Response.Cookies.Append("name", "Tom");
             var response = await _userService.Login(loginModel);
             if (response.Code <= HttpStatusCode.PermanentRedirect) { return Json(response.Data); }
             else { return BadRequest(); }
         }
 
         [HttpPost("registration")]
-        [EnableCors("CorsPolicy")]
         public async Task<IActionResult> Register([FromBody] RegisterUserModel registerModel)
         {
             var response = await _userService.Register(registerModel);
