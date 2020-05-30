@@ -2,15 +2,12 @@
 using LearnElectronics.Database;
 using LearnElectronics.Services.IoC;
 using LearnElectronics.Services.MappingProfile;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Globalization;
 
 
 namespace LearnElectronics.WebApi
@@ -28,8 +25,10 @@ namespace LearnElectronics.WebApi
         {
             services.InitializeServices();
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer("Server=" + Environment.MachineName + ";Database=LearnElectronics;Integrated Security=True;"));
-            services.AddCors();
-
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CORS", builder => builder.WithOrigins("https://reverent-meitner-6e7dbe.netlify.app").AllowAnyHeader().AllowAnyHeader().AllowCredentials());
+            });
 
             var mappingConfig = new MapperConfiguration(mc =>
             {
@@ -44,10 +43,9 @@ namespace LearnElectronics.WebApi
 
         public void Configure(IApplicationBuilder app)
         {
-
             app.UseDeveloperExceptionPage();
             app.UseHttpsRedirection();
-            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+            app.UseCors();
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseMvc();

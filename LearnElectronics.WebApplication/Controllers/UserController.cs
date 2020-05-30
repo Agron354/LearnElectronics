@@ -3,10 +3,12 @@ using System.Net;
 using System.Threading.Tasks;
 using LearnElectronics.Services.Contracts.Models;
 using LearnElectronics.Services.Contracts.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LearnElectronics.WebApplication.Controllers
 {
+    [EnableCors("CORS")]
     public class UserController : Controller
     {
         private readonly IUserService _userService;
