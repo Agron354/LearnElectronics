@@ -23,7 +23,7 @@ namespace LearnElectronics.WebApplication.Controllers
         [HttpPost("comment")]
         public async Task<IActionResult> AddComment([FromBody] AddCommentModel addCommentModel)
         {
-            var response = await _commentService.AddComment(addCommentModel, 1);
+            var response = await _commentService.AddComment(addCommentModel, Convert.ToInt32(Request.Cookies["userId"]));
             if (response.Code <= HttpStatusCode.PermanentRedirect) { return Json(response.Data); }
             else { return BadRequest(); }
         }
@@ -32,7 +32,7 @@ namespace LearnElectronics.WebApplication.Controllers
         [HttpPut("comment")]
         public async Task<IActionResult> EditComment([FromBody] EditCommentModel editCommentModel)
         {
-            var response = await _commentService.EditComment(editCommentModel, 1);
+            var response = await _commentService.EditComment(editCommentModel, Convert.ToInt32(Request.Cookies["userId"]));
             if (response.Code <= HttpStatusCode.PermanentRedirect) { return Json(response.Data); }
             else { return BadRequest(); }
         }
@@ -40,7 +40,7 @@ namespace LearnElectronics.WebApplication.Controllers
         [HttpDelete("comment/{id}")]
         public async Task<IActionResult> DeleteComment(int id)
         {
-            var response = await _commentService.DeleteComment(id, 1);
+            var response = await _commentService.DeleteComment(id, Convert.ToInt32(Request.Cookies["userId"]));
             if (response.Code <= HttpStatusCode.PermanentRedirect) { return Json(response.Data); }
             else { return BadRequest(); }
         }
