@@ -27,7 +27,7 @@ namespace LearnElectronics.WebApi
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer("Server=" + Environment.MachineName + ";Database=LearnElectronics;Integrated Security=True;"));
             services.AddCors(options =>
             {
-                options.AddPolicy("CORS", builder => builder.WithOrigins("https://reverent-meitner-6e7dbe.netlify.app").AllowAnyHeader().AllowAnyHeader().AllowCredentials());
+                options.AddPolicy("CORS", builder => builder.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyHeader().AllowCredentials());
             });
 
             var mappingConfig = new MapperConfiguration(mc =>
@@ -43,9 +43,15 @@ namespace LearnElectronics.WebApi
 
         public void Configure(IApplicationBuilder app)
         {
+            app.Use((context, next) =>
+            {
+                context.Response.Headers["Access-Control-Allow-Origin"] = "http://localhost:3000";
+                context.Response.Headers["Access-Control-Allow-Credentials"] = "true";
+                return next.Invoke();
+            });
             app.UseDeveloperExceptionPage();
             app.UseHttpsRedirection();
-            app.UseCors();
+            app.UseCors("CORS");
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseMvc();

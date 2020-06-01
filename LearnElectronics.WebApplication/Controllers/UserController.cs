@@ -21,8 +21,6 @@ namespace LearnElectronics.WebApplication.Controllers
         [HttpGet("account")]
         public async Task<IActionResult> GetUserAccount()
         {
-            Response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:3000");
-            Response.Headers.Add("Access-Control-Allow-Credentials", "true");
             var response = await _userService.GetUserAccount(Convert.ToInt32(Request.Cookies["userId"]));
             if (response.Code <= HttpStatusCode.PermanentRedirect) { return Json(response.Data); }
             else { return BadRequest(); }
