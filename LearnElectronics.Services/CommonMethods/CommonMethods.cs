@@ -20,6 +20,7 @@ namespace LearnElectronics.Services
                 var commentAuthor = await _applicationContext.Users.FirstOrDefaultAsync(us => us.Id == comment.UserId);
 
                 var currentComment = _mapper.Map<CommentModel>(comment);
+                currentComment.DateTime = comment.DateTime.ToShortDateString();
                 currentComment.UserName = commentAuthor.UserName;
                 currentComment.Likes = likes.Count;
                 currentComment.Dislikes = dislikes.Count;

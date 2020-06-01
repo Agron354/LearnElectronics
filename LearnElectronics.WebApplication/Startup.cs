@@ -27,7 +27,7 @@ namespace LearnElectronics.WebApi
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer("Server=" + Environment.MachineName + ";Database=LearnElectronics;Integrated Security=True;"));
             services.AddCors(options =>
             {
-                options.AddPolicy("CORS", builder => builder.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyHeader().AllowCredentials());
+                options.AddPolicy("CORS", builder => builder.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
             });
 
             var mappingConfig = new MapperConfiguration(mc =>
