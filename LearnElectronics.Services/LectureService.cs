@@ -60,7 +60,7 @@ namespace LearnElectronics.Services
             lectureModel.IsCompleted = isLectureCompleted != null ? true : false;
 
             var lectureComments = await _applicationContext.Comments.Where(com => com.LectureId == lectureModel.Id).ToListAsync();
-            lectureModel.Comments = await CommonMethods.GetCommentList(lectureComments, new List<CommentModel>(), _applicationContext, _mapper);
+            lectureModel.Comments = await CommonMethods.GetCommentList(lectureComments, new List<CommentModel>(), _applicationContext, _mapper, userId);
 
             return new BaseResponse<LectureModel>
             {

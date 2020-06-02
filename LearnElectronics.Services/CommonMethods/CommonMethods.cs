@@ -10,7 +10,7 @@ namespace LearnElectronics.Services
 {
     public class CommonMethods
     {
-        public static async Task<List<CommentModel>> GetCommentList(List<Comment> commentList, List<CommentModel> comments, ApplicationContext _applicationContext, IMapper _mapper)
+        public static async Task<List<CommentModel>> GetCommentList(List<Comment> commentList, List<CommentModel> comments, ApplicationContext _applicationContext, IMapper _mapper, int userId)
         {
             foreach (var comment in commentList)
             {
@@ -22,8 +22,21 @@ namespace LearnElectronics.Services
                 var currentComment = _mapper.Map<CommentModel>(comment);
                 currentComment.DateTime = comment.DateTime.ToShortDateString();
                 currentComment.UserName = commentAuthor.UserName;
-                currentComment.Likes = likes.Count;
-                currentComment.Dislikes = dislikes.Count;
+
+                var currentUserLike = await _applicationContext.Likes.FirstOrDefaultAsync(like => like.CommentId == comment.Id && like.UserId == userId);
+                var currentUserDislike = await _applicationContext.Dislikes.FirstOrDefaultAsync(dlike => dlike.CommentId == comment.Id && dlike.UserId == userId);
+
+                currentComment.Likes = new LikeModel()
+                {
+                    Count = likes.Count,
+                    IsLiked = currentUserLike != null
+                };
+
+                currentComment.Dislikes = new DislikeModel()
+                {
+                    Count = dislikes.Count,
+                    IsDisliked = currentUserDislike != null
+                };
 
                 comments.Add(currentComment);
             }

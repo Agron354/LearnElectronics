@@ -42,7 +42,7 @@ namespace LearnElectronics.Services
             var commentList = await _applicationContext.Comments.Where(com => com.LectureId == addCommentModel.LectureId).ToListAsync();
             var comments = new List<CommentModel>();
 
-            comments = await CommonMethods.GetCommentList(commentList, comments, _applicationContext, _mapper);
+            comments = await CommonMethods.GetCommentList(commentList, comments, _applicationContext, _mapper, userId);
 
             return new BaseResponse<List<CommentModel>>
             {
@@ -52,7 +52,7 @@ namespace LearnElectronics.Services
 
         }
 
-        public async Task<IBaseResponse<List<CommentModel>>> EditComment(EditCommentModel editCommentModel, int UserId)
+        public async Task<IBaseResponse<List<CommentModel>>> EditComment(EditCommentModel editCommentModel, int userId)
         {
             var editedComment = await _applicationContext.Comments.FindAsync(editCommentModel.CommentId);
             if (editedComment != null)
@@ -64,7 +64,7 @@ namespace LearnElectronics.Services
             var commentList = await _applicationContext.Comments.Where(com => com.LectureId == editedComment.LectureId).ToListAsync();
             var comments = new List<CommentModel>();
 
-            comments = await CommonMethods.GetCommentList(commentList, comments, _applicationContext, _mapper);
+            comments = await CommonMethods.GetCommentList(commentList, comments, _applicationContext, _mapper, userId);
 
             return new BaseResponse<List<CommentModel>>
             {
@@ -74,7 +74,7 @@ namespace LearnElectronics.Services
 
         }
 
-        public async Task<IBaseResponse<List<CommentModel>>> DeleteComment(int id, int UserId)
+        public async Task<IBaseResponse<List<CommentModel>>> DeleteComment(int id, int userId)
         {
             var deletedComment = await _applicationContext.Comments.FindAsync(id);
             if (deletedComment != null)
@@ -85,7 +85,7 @@ namespace LearnElectronics.Services
             var commentList = await _applicationContext.Comments.Where(com => com.LectureId == deletedComment.LectureId).ToListAsync();
             var comments = new List<CommentModel>();
 
-            comments = await CommonMethods.GetCommentList(commentList, comments, _applicationContext, _mapper);
+            comments = await CommonMethods.GetCommentList(commentList, comments, _applicationContext, _mapper, userId);
 
             return new BaseResponse<List<CommentModel>>
             {

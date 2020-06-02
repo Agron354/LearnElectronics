@@ -31,6 +31,18 @@ namespace LearnElectronics.Services
                         UserId = userId
                     }
                 );
+                var dislike = await _applicationContext.Dislikes.FirstOrDefaultAsync(dlik => dlik.CommentId == commentId && dlik.UserId == userId);
+                if (dislike != null)
+                {
+                    _applicationContext.Dislikes.Remove
+                    (
+                        new Dislike
+                        {
+                            CommentId = commentId,
+                            UserId = userId
+                        }
+                    );
+                }
                 await _applicationContext.SaveChangesAsync();
             }
             else
@@ -61,6 +73,18 @@ namespace LearnElectronics.Services
                         UserId = userId
                     }
                 );
+                var like = await _applicationContext.Likes.FirstOrDefaultAsync(lik => lik.CommentId == commentId && lik.UserId == userId);
+                if (like != null)
+                {
+                    _applicationContext.Likes.Remove
+                    (
+                        new Like
+                        {
+                            CommentId = commentId,
+                            UserId = userId
+                        }
+                    );
+                }
                 await _applicationContext.SaveChangesAsync();
             }
             else
