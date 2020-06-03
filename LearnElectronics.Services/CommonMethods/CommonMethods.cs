@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using LearnElectronics.CommonData;
 using LearnElectronics.Database;
 using LearnElectronics.Services.Contracts.Models;
 using Microsoft.EntityFrameworkCore;
@@ -26,17 +27,9 @@ namespace LearnElectronics.Services
                 var currentUserLike = await _applicationContext.Likes.FirstOrDefaultAsync(like => like.CommentId == comment.Id && like.UserId == userId);
                 var currentUserDislike = await _applicationContext.Dislikes.FirstOrDefaultAsync(dlike => dlike.CommentId == comment.Id && dlike.UserId == userId);
 
-                currentComment.Likes = new LikeModel()
-                {
-                    Count = likes.Count,
-                    IsLiked = currentUserLike != null
-                };
-
-                currentComment.Dislikes = new DislikeModel()
-                {
-                    Count = dislikes.Count,
-                    IsDisliked = currentUserDislike != null
-                };
+                currentComment.Likes = likes.Count;
+                currentComment.Dislikes = dislikes.Count;
+                currentComment.Rate = currentUserLike != null ? Rate.Liked : currentUserDislike != null ? Rate.Disliked : Rate.Norate; 
 
                 comments.Add(currentComment);
             }

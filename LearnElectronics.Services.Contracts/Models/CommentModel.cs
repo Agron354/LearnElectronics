@@ -1,4 +1,6 @@
 ﻿
+using LearnElectronics.CommonData;
+
 namespace LearnElectronics.Services.Contracts.Models
 {
     public class CommentModel
@@ -8,7 +10,8 @@ namespace LearnElectronics.Services.Contracts.Models
         public int UserId { get; set; }
         public string UserName { get; set; }
         public string Text { get; set; }
-        public LikeModel Likes { get; set; }
-        public DislikeModel Dislikes { get; set; }
+        public int Likes { get; set; }
+        public int Dislikes { get; set; }
+        public Rate Rate { get; set; }
     }
 }
