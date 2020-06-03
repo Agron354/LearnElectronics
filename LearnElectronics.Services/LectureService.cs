@@ -52,6 +52,7 @@ namespace LearnElectronics.Services
                 {
                     testQuestion.Variants.Add(questionVariants[i].Description);
                 }
+                testQuestion.Component = question.Component.ToString().ToLower();
                 testQuestionModels.Add(testQuestion);
             }
             lectureModel.Test.Questions = testQuestionModels; 
