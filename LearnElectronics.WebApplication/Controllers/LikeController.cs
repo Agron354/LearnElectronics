@@ -31,7 +31,7 @@ namespace LearnElectronics.WebApplication.Controllers
 
 
         [HttpPost("dislike")]
-        public async Task<IActionResult> DislikeComment([FromBody] LikeCommentModel commentModel)
+        public async Task<IActionResult> DislikeComment([FromBody] DisikeCommentModel commentModel)
         {
             var response = await _likeService.DislikeComment(commentModel.Id, Convert.ToInt32(Request.Cookies["userId"]));
             if (response.Code <= HttpStatusCode.PermanentRedirect) { return Json(response.Data); }
