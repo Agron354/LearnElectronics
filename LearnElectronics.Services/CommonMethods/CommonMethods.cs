@@ -29,7 +29,7 @@ namespace LearnElectronics.Services
 
                 currentComment.Likes = likes.Count;
                 currentComment.Dislikes = dislikes.Count;
-                currentComment.Rate = currentUserLike != null ? Rate.Liked : currentUserDislike != null ? Rate.Disliked : Rate.Norate; 
+                currentComment.Rate = currentUserLike != null ? Rate.Liked.ToString() : currentUserDislike != null ? Rate.Disliked.ToString() : Rate.Norate.ToString(); 
 
                 comments.Add(currentComment);
             }

@@ -12,6 +12,6 @@ namespace LearnElectronics.Services.Contracts.Models
         public string Text { get; set; }
         public int Likes { get; set; }
         public int Dislikes { get; set; }
-        public Rate Rate { get; set; }
+        public string Rate { get; set; }
     }
 }
