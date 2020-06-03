@@ -232,7 +232,7 @@ namespace LearnElectronics.Database
                 {
                     Id = 2,
                     Description = "dfgfd",
-                    Component = TestComponent.Input,
+                    Component = TestComponent.Checkbox,
                     TestId = 2
                 },
 
@@ -240,7 +240,7 @@ namespace LearnElectronics.Database
                 {
                     Id = 3,
                     Description = "dfgfd",
-                    Component = TestComponent.RadioButton,
+                    Component = TestComponent.Checkbox,
                     TestId = 3
                 },
             };
