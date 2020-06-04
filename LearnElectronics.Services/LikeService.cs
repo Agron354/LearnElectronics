@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using LearnElectronics.CommonData;
 using LearnElectronics.Database;
 using LearnElectronics.Services.Contracts;
+using LearnElectronics.Services.Contracts.Models;
 using LearnElectronics.Services.Contracts.Services;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
@@ -18,7 +20,7 @@ namespace LearnElectronics.Services
             _applicationContext = applicationContext;
             _mapper = mapper;
         }
-        public async Task<IBaseResponse<int>> LikeComment(int commentId, int userId)
+        public async Task<IBaseResponse<LikeModel>> LikeComment(int commentId, int userId)
         {
             var like = await _applicationContext.Likes.FirstOrDefaultAsync(lik => lik.CommentId == commentId && lik.UserId == userId);
             if (like == null)
@@ -44,16 +46,23 @@ namespace LearnElectronics.Services
                 await _applicationContext.SaveChangesAsync();
             }
             var likes = await _applicationContext.Likes.Where(lik => lik.CommentId == commentId).ToListAsync();
-            var likeCount = likes.Count();
 
-            return new BaseResponse<int>
+            var currentUserLike = await _applicationContext.Likes.FirstOrDefaultAsync(lik => lik.CommentId == commentId && lik.UserId == userId);
+            var currentUserDislike = await _applicationContext.Dislikes.FirstOrDefaultAsync(dlike => dlike.CommentId == commentId && dlike.UserId == userId);
+
+            return new BaseResponse<LikeModel>
             {
                 Code = commentId != 0 ? HttpStatusCode.OK : HttpStatusCode.BadRequest,
-                Data = likeCount
+                Data = new LikeModel()
+                {
+                    Count = likes.Count(),
+                    Rate = currentUserLike != null ? Rate.Liked.ToString().ToLower() : currentUserDislike != null ?
+                    Rate.Disliked.ToString().ToLower() : Rate.Norate.ToString().ToLower()
+                }       
             };
         }
 
-        public async Task<IBaseResponse<int>> DislikeComment(int commentId, int userId)
+        public async Task<IBaseResponse<DislikeModel>> DislikeComment(int commentId, int userId)
         {
             var dislike = await _applicationContext.Dislikes.FirstOrDefaultAsync(dislik => dislik.CommentId == commentId && dislik.UserId == userId);
             if (dislike == null)
@@ -79,12 +88,19 @@ namespace LearnElectronics.Services
                 await _applicationContext.SaveChangesAsync();
             }
             var dislikes = await _applicationContext.Dislikes.Where(dislik => dislik.CommentId == commentId).ToListAsync();
-            var dislikeCount = dislikes.Count();
 
-            return new BaseResponse<int>
+            var currentUserLike = await _applicationContext.Likes.FirstOrDefaultAsync(like => like.CommentId == commentId && like.UserId == userId);
+            var currentUserDislike = await _applicationContext.Dislikes.FirstOrDefaultAsync(dlike => dlike.CommentId == commentId && dlike.UserId == userId);
+
+            return new BaseResponse<DislikeModel>
             {
                 Code = commentId != 0 ? HttpStatusCode.OK : HttpStatusCode.BadRequest,
-                Data = dislikeCount
+                Data = new DislikeModel()
+                {
+                    Count = dislikes.Count(),
+                    Rate = currentUserLike != null ? Rate.Liked.ToString().ToLower() : currentUserDislike != null ?
+                    Rate.Disliked.ToString().ToLower() : Rate.Norate.ToString().ToLower()
+                }
             };
         }
     }
