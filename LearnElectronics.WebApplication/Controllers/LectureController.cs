@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LearnElectronics.WebApplication.Controllers
 {
+    [ApiController]
     [EnableCors("CORS")]
     public class LectureController : Controller
     {
@@ -18,7 +19,7 @@ namespace LearnElectronics.WebApplication.Controllers
         }
 
         [HttpGet("lecture/{id}")]
-        public async Task<IActionResult> GetUserAccount(int id)
+        public async Task<IActionResult> GetLecture(int id)
         {
             var response = await _lectureService.GetLecture(id, Convert.ToInt32(Request.Cookies["userId"]));
             if (response.Code <= HttpStatusCode.PermanentRedirect) { return Json(response.Data); }
