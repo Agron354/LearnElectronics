@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LearnElectronics.WebApplication.Controllers
 {
-    [ApiController]
     [EnableCors("CORS")]
     public class LectureController : Controller
     {
