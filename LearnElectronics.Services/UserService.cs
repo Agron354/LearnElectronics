@@ -89,7 +89,7 @@ namespace LearnElectronics.Services
             var userAccount = new UserAccountModel();
             registerUserModel.Password = Hashing.HashValue(registerUserModel.Password);
 
-            var user = await _applicationContext.Users.FirstOrDefaultAsync(us => us.Login == registerUserModel.Login || us.Password == registerUserModel.Password);
+            var user = await _applicationContext.Users.FirstOrDefaultAsync(us => us.Login == registerUserModel.Login);
             if (user != null)
                 return new BaseResponse<UserAccountModel>
                 {
