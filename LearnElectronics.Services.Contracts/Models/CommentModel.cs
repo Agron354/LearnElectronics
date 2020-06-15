@@ -1,7 +1,4 @@
-﻿
-using LearnElectronics.CommonData;
-
-namespace LearnElectronics.Services.Contracts.Models
+﻿namespace LearnElectronics.Services.Contracts.Models
 {
     public class CommentModel
     {

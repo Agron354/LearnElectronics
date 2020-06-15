@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LearnElectronics.Database
+﻿namespace LearnElectronics.Database
 {
     public class QuestionVariant
     {

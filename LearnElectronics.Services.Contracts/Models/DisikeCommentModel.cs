@@ -1,6 +1,4 @@
-﻿
-
-namespace LearnElectronics.Services.Contracts.Models
+﻿namespace LearnElectronics.Services.Contracts.Models
 {
     public class DisikeCommentModel
     {

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-
-namespace LearnElectronics.CommonData
+﻿namespace LearnElectronics.CommonData
 {
     public enum TestComponent
     {

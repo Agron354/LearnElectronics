@@ -46,6 +46,7 @@ namespace LearnElectronics.Services
                         Data = userAccount
                     };
                 userAccount = _mapper.Map<UserAccountModel>(userInfo);
+                userAccount.RegistrationData = userInfo.RegistrationData.ToShortDateString();
                 userAccount = await GetUserActivity(userAccount, userId, _applicationContext);
             }
             else return new BaseResponse<UserAccountModel>
