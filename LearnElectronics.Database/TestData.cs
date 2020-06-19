@@ -21,6 +21,8 @@ namespace LearnElectronics.Database
         public static TestData GetTestData()
         {
 
+
+
             var themes = new Theme[]
             {
                 new Theme
@@ -61,64 +63,53 @@ namespace LearnElectronics.Database
             };
 
             var lectures = new Lecture[]
-            {
+{
                 new Lecture
                 {
                     Id = 1,
-                    Title = "Electric Weapon",
-                    Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
-                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
-                    " when an unknown printer took a galley of type and scrambled it to make a type specimen book." +
-                    " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. " +
-                    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages," +
-                    " and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                    Content = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
-                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
-                    " when an unknown printer took a galley of type and scrambled it to make a type specimen book." +
-                    " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. " +
-                    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages," +
-                    " and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                    ThemeId = 1
+                    Title = Recources.LearnElectronics_Database_ru_Article1.Title,
+                    Description = Recources.LearnElectronics_Database_ru_Article1.Description,
+                    Content = Recources.LearnElectronics_Database_ru_Article1.Content,
+                    ThemeId = Convert.ToInt32(Recources.LearnElectronics_Database_ru_Article1.ThemeId)
                 },
 
                 new Lecture
                 {
                     Id = 2,
-                    Title = "Electric Weapon",
-                    Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
-                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
-                    " when an unknown printer took a galley of type and scrambled it to make a type specimen book." +
-                    " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. " +
-                    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages," +
-                    " and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                    Content = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
-                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
-                    " when an unknown printer took a galley of type and scrambled it to make a type specimen book." +
-                    " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. " +
-                    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages," +
-                    " and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                    ThemeId = 2
+                    Title = Recources.LearnElectronics_Database_ru_Article2.Title,
+                    Description = Recources.LearnElectronics_Database_ru_Article2.Description,
+                    Content = Recources.LearnElectronics_Database_ru_Article2.Content,
+                    ThemeId = Convert.ToInt32(Recources.LearnElectronics_Database_ru_Article2.ThemeId)
                 },
 
                 new Lecture
                 {
                     Id = 3,
-                    Title = "Electric Weapon",
-                    Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
-                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
-                    " when an unknown printer took a galley of type and scrambled it to make a type specimen book." +
-                    " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. " +
-                    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages," +
-                    " and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                    Content = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
-                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
-                    " when an unknown printer took a galley of type and scrambled it to make a type specimen book." +
-                    " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. " +
-                    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages," +
-                    " and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                    ThemeId = 3
+                    Title = Recources.LearnElectronics_Database_ru_Article3.Title,
+                    Description = Recources.LearnElectronics_Database_ru_Article3.Description,
+                    Content = Recources.LearnElectronics_Database_ru_Article3.Content,
+                    ThemeId = Convert.ToInt32(Recources.LearnElectronics_Database_ru_Article3.ThemeId)
                 },
-            };
+
+                new Lecture
+                {
+                    Id = 4,
+                    Title = Recources.LearnElectronics_Database_ru_Article4.Title,
+                    Description = Recources.LearnElectronics_Database_ru_Article4.Description,
+                    Content = Recources.LearnElectronics_Database_ru_Article4.Content,
+                    ThemeId = Convert.ToInt32(Recources.LearnElectronics_Database_ru_Article4.ThemeId)
+                },
+
+                new Lecture
+                {
+                    Id = 5,
+                    Title = Recources.LearnElectronics_Database_ru_Article5.Title,
+                    Description = Recources.LearnElectronics_Database_ru_Article5.Description,
+                    Content = Recources.LearnElectronics_Database_ru_Article5.Content,
+                    ThemeId = Convert.ToInt32(Recources.LearnElectronics_Database_ru_Article5.ThemeId)
+                }
+
+};
 
             var comments = new Comment[]
             {

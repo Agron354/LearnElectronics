@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Content" xml:space="preserve">
+    <value># Пространство и материя     
+  
+## Введение 
+
+Разбираться с тем, что такое электричество мы начнем с базовых знаний о мире. Обычно люди не  имеют целостного понимания мира, и это очень мешает им принимать решения, учится, и т.д.      
+    
+Цель нашего проекта - создание целостной и структурированной картины мира, поэтому начнем.      
+  
+ ## Мир  
+  
+  #### Мир - это вся материя которая объективно существует.      
+ Когда мы говорим ,что хотим создать у наших студентов целостное понимание мира, это значит  то, что мы будем рассказывать об устройстве материи и  как она взаимодействует сама с собой. Все что нас окружает - это материя. Люди,  благодаря своим органам чувств, могут ее воспринимать (правда не очень качественно, но  об это в другой лекции).      
+      
+#### Материя - это вещество и поля которые существуют в пространстве.   
+
+ Из определения сразу себе можно представить планету Земля, которая находится в космосе.  Космос - это пространство. Планета - это материя. Магнитное поле, которое генерирует ядро планеты, и которое окружает нашу планету - это поле.       
+      
+Давайте разберем  это определение подробнее. Из определения мы видим , что материя бывает двух видов -  вещество и поле, также материя имеет две характеристики (два свойства) -  существование во времени, и нахождение в пространстве.       
+      
+Определения - это как конструктор LEGO в котором мы собираем машинку.  Мы собираем из маленьких деталек большие запчасти и смотрим, можем ли мы вставить эти  запчасти в машинку.      
+  
+#### Поле - это вид материи ,образующий физический объект который не имеет массу.  
+  
+То что поля, это часть материи, мы уже знаем, но что такое физический объект? Давайте будем считать, что физический объект - это материя у которой можно выделить различимую границу, а также которая занимает какой либо объем.   
+  
+Свойства поля это - непрерывность и однородность. Давайте разбираться!   
+  
+- Непрерывность - это когда объект в любой точке своего объема состоит из одной и той-же материи.  
+  
+- Однородность - это когда любая точка внутри объекта взаимодействует с материей одинаковым образом, может меняться лишь сила взаимодействия.  
+  
+А теперь примеры!  
+  
+Давайте представим обычный неодимовый магнит (как магниты образуют магнитное поле мы разберем в следующих главах). Он окружен магнитным  полем. Границу магнитного поля мы можем увидеть если начнем подносить компас к магниту, когда стрелка начнет отклоняться от стандартного направления, это означает , что компас находится внутри магнитного поля. Еще один эксперимент можно увидеть, если мы положим магнит на специальную ферромагнитную жидкость (вода с мелкими частичками железа). Магнитное поле начнет взаимодействовать с частичками железа, поднимая из воды интересные складки.  
+  
+Вы можете заметить ,что какую бы область внутри магнитного поля мы не рассматривали, она какае-то одинаковая, то есть везде прозрачная, не имеет массу, это и есть непрерывность.  
+  
+Также можно заметить, что магнитное поле одинаково взаимодействует с материей, оно всегда отклоняет стрелку компаса одним и тем же образом, меняется лишь сила этого взаимодействия, например если мы отнесем компас подальше от магнита, то стрелка компаса все еще будет поворачиваться, но уже очень неохотно. Это значит что сила воздействия магнитного поля на стрелку компаса изменилась, но принцип воздействия остался - это однородность.  
+      
+#### Вещество - это вид материи ,который составляет физические объекты имеющие массу.   
+
+У вещества ,как и поля, можно выделить два свойства:
+
+- Дискретность - это когда объект состоит из разных видов материи. То есть если мы возьмем две точки внутри объекта, они могут быть разными видами материи.
+- Неоднородность - когда разные точки внутри объекта по разному взаимодействуют с материей.
+
+ Давайте сразу с примера.  Возьмем камень с дороги. Мы сразу можем сказать что он имеет вес, он имеет четкую границу, мы можем узнать объем этого камня, короче мы определили ,что перед нами физический объект который состоит из вещества.
+
+**Дальше следите за рассуждениями**
+ 
+Если мы посмотрим на камень внимательнее ,то увидим что он имеет сложную структуру. 
+
+Камень окрашен в разные цвета, имеет полости, состоит из различных минералов - кремний , слюда, кварц.  Следовательно, мы можем сказать что камень дискретен.
+
+Также мы можем увидеть что вкрапления кварца прозрачны, а другие участки камня наоборот непрозрачны, значит разные участки камня по разному взаимодействуют с остальной материей, следовательно камень неоднороден. 
+  
+Самой маленькой составной частью вещества, мы будет считать элементарную частицу, кстати  электрон, это и есть одна из (большого количества известных науке) элементарных частиц. Элементарные частицы могут образовывать атомы, атомы в свою очередь могут образовывать молекулы, молекулы в свою очередь могут образовывать живых существ.      
+  
+## Заключение  
+  
+Мы разобрали базовые понятия с которыми нам придется столкнуться, в процессе изучения электроники, мир, материя, вещество, поле - теперь вы можете соотносить эти слова с конкретными примерами из реального мира, и это здорово!</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>"Про пространство и материю"</value>
+  </data>
+  <data name="ThemeId" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Пространство и материя</value>
+  </data>
+</root>

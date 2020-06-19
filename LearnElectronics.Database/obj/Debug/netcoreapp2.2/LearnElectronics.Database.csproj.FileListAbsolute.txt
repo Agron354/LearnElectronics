@@ -12,3 +12,9 @@ D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.
 D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.csproj.CopyComplete
 D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.dll
 D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.pdb
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.Recources.LearnElectronics.Database.ru.Article1.resources
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.Recources.LearnElectronics.Database.ru.Article2.resources
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.Recources.LearnElectronics.Database.ru.Article3.resources
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.Recources.LearnElectronics.Database.ru.Article4.resources
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.Recources.LearnElectronics.Database.ru.Article5.resources
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.csproj.GenerateResource.cache
