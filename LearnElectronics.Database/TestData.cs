@@ -21,44 +21,15 @@ namespace LearnElectronics.Database
         public static TestData GetTestData()
         {
 
-
-
             var themes = new Theme[]
             {
                 new Theme
                 {
                     Id = 1,
-                    Title = "Electric Weapon",
-                    Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
-                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
-                    " when an unknown printer took a galley of type and scrambled it to make a type specimen book." +
-                    " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. " +
-                    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages," +
-                    " and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-                },
-
-                new Theme
-                {
-                    Id = 2,
-                    Title = "Electric Weapon 453564",
-                    Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
-                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
-                    " when an unknown printer took a galley of type and scrambled it to make a type specimen book." +
-                    " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. " +
-                    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages," +
-                    " and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-                },
-
-                new Theme
-                {
-                    Id = 3,
-                    Title = "Electric",
-                    Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
-                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
-                    " when an unknown printer took a galley of type and scrambled it to make a type specimen book." +
-                    " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. " +
-                    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages," +
-                    " and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                    Title = "Реальный мир и в электричество",
+                    Description = "В данном разделе даются базовые понятия о том, что такое реальный мир, его важнейших понятиях." +
+                    "Изучив данный раздел, можно получить целостную базовую модель, от которой можно опираться, изучая дальнейшие темы курса." +
+                    "Давайте же погрузимся в удивительный мир электроники"
                 },
             };
 
@@ -117,42 +88,9 @@ namespace LearnElectronics.Database
                 {
                     Id = 1,
                     DateTime = DateTime.Now,
-                    Text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
-                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
-                    " when an unknown printer took a galley of type and scrambled it to make a type specimen book." +
-                    " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. " +
-                    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages," +
-                    " and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                    Text = "О удивительная электроника!",
                     LectureId = 1,
                     UserId = 1
-                },
-
-                new Comment
-                {
-                    Id = 2,
-                    DateTime = DateTime.Now,
-                    Text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
-                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
-                    " when an unknown printer took a galley of type and scrambled it to make a type specimen book." +
-                    " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. " +
-                    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages," +
-                    " and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                    LectureId = 2,
-                    UserId = 2
-                },
-
-                new Comment
-                {
-                    Id = 3,
-                    DateTime = DateTime.Now,
-                    Text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
-                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
-                    " when an unknown printer took a galley of type and scrambled it to make a type specimen book." +
-                    " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. " +
-                    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages," +
-                    " and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                    LectureId = 3,
-                    UserId = 3
                 },
             };
 
@@ -161,41 +99,43 @@ namespace LearnElectronics.Database
                 new Test
                 {
                     Id = 1,
-                    Title = "dfgfd",
-                    Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
-                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
-                    " when an unknown printer took a galley of type and scrambled it to make a type specimen book." +
-                    " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. " +
-                    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages," +
-                    " and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                    Title = "Пространство и материя",
+                    Description = "Пройдите тест, чтобы узнать, насколько хорошо Вы усвоили устройство пространства и материи",
                     LectureId = 1
                 },
 
                 new Test
                 {
                     Id = 2,
-                    Title = "dfgfd",
-                    Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
-                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
-                    " when an unknown printer took a galley of type and scrambled it to make a type specimen book." +
-                    " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. " +
-                    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages," +
-                    " and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                    Title = "Строение атома",
+                    Description = "Пройдите тест, чтобы узнать, насколько хорошо Вы усвоили строение атома",
                     LectureId = 2
                 },
 
                 new Test
                 {
                     Id = 3,
-                    Title = "dfgfd",
-                    Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
-                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s," +
-                    " when an unknown printer took a galley of type and scrambled it to make a type specimen book." +
-                    " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. " +
-                    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages," +
-                    " and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                    Title = "Откуда берется электичество",
+                    Description = "Пройдите тест, чтобы узнать, насколько хорошо Вы усвоили откуда берется электричество",
                     LectureId = 3
                 },
+
+                new Test
+                {
+                    Id = 4,
+                    Title = "Электрическое сопротивление",
+                    Description = "Пройдите тест, чтобы узнать, насколько хорошо Вы усвоили устройство электрического сопротивления",
+                    LectureId = 4
+                },
+
+                new Test
+                {
+                    Id = 5,
+                    Title = "Электрическое поле",
+                    Description = "Пройдите тест, чтобы узнать, насколько хорошо Вы усвоили устройство электрического поля",
+                    LectureId = 5
+                },
+
             };
 
             var questions = new Question[]
@@ -203,33 +143,145 @@ namespace LearnElectronics.Database
                 new Question
                 {
                     Id = 1,
-                    Description = "dfgfd",
+                    Description = Recources.LearnElectronics_Database_ru_Test1_Questions.Question1,
                     Component = TestComponent.Checkbox,
                     TestId = 1
                 },
 
                  new Question
                 {
-                    Id = 4,
-                    Description = "dfgfd",
+                    Id = 2,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_Questions.Question2,
                     Component = TestComponent.Checkbox,
                     TestId = 1
                 },
 
                 new Question
                 {
-                    Id = 2,
-                    Description = "dfgfd",
+                    Id = 3,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_Questions.Question3,
+                    Component = TestComponent.Checkbox,
+                    TestId = 1
+                },
+
+                new Question
+                {
+                    Id = 4,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_Questions.Question4,
+                    Component = TestComponent.Checkbox,
+                    TestId = 1
+                },
+
+                new Question
+                {
+                    Id = 5,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_Questions.Question5,
+                    Component = TestComponent.Checkbox,
+                    TestId = 1
+                },
+
+                new Question
+                {
+                    Id = 6,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_Questions.Question6,
+                    Component = TestComponent.Checkbox,
+                    TestId = 1
+                },
+
+                new Question
+                {
+                    Id = 7,
+                    Description = Recources.LearnElectronics_Database_ru_Test2_Questions.Question1,
                     Component = TestComponent.Checkbox,
                     TestId = 2
                 },
 
                 new Question
                 {
-                    Id = 3,
-                    Description = "dfgfd",
+                    Id = 8,
+                    Description = Recources.LearnElectronics_Database_ru_Test2_Questions.Question2,
+                    Component = TestComponent.Checkbox,
+                    TestId = 2
+                },
+
+                new Question
+                {
+                    Id = 9,
+                    Description = Recources.LearnElectronics_Database_ru_Test2_Questions.Question3,
+                    Component = TestComponent.Checkbox,
+                    TestId = 2
+                },
+
+                new Question
+                {
+                    Id = 10,
+                    Description = Recources.LearnElectronics_Database_ru_Test3_Questions.Question1,
                     Component = TestComponent.Checkbox,
                     TestId = 3
+                },
+
+                new Question
+                {
+                    Id = 11,
+                    Description = Recources.LearnElectronics_Database_ru_Test3_Questions.Question2,
+                    Component = TestComponent.Checkbox,
+                    TestId = 3
+                },
+
+                new Question
+                {
+                    Id = 12,
+                    Description = Recources.LearnElectronics_Database_ru_Test3_Questions.Question3,
+                    Component = TestComponent.Checkbox,
+                    TestId = 3
+                },
+
+                new Question
+                {
+                    Id = 13,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_Questions.Question1,
+                    Component = TestComponent.Checkbox,
+                    TestId = 4
+                },
+
+                new Question
+                {
+                    Id = 14,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_Questions.Question2,
+                    Component = TestComponent.Checkbox,
+                    TestId = 4
+                },
+
+                new Question
+                {
+                    Id = 15,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_Questions.Question3,
+                    Component = TestComponent.Checkbox,
+                    TestId = 4
+                },
+
+                new Question
+                {
+                    Id = 16,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_Questions.Question4,
+                    Component = TestComponent.Checkbox,
+                    TestId = 4
+                },
+
+                new Question
+                {
+                    Id = 17,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_Questions.Question5,
+                    Component = TestComponent.Checkbox,
+                    TestId = 4
+                },
+
+                new Question
+                {
+                    Id = 18,
+                    Description = Recources.LearnElectronics_Database_ru_Test5_Questions.Question1,
+                    Component = TestComponent.Checkbox,
+                    TestId = 5
                 },
             };
 
@@ -238,21 +290,7 @@ namespace LearnElectronics.Database
                 new QuestionVariant
                 {
                     Id = 1,
-                    Description = "dfgfd",
-                    IsCorrect = false,
-                    QuestionId = 1,
-                },
-                new QuestionVariant
-                {
-                    Id = 4,
-                    Description = "fdgd",
-                    IsCorrect = true,
-                    QuestionId = 1,
-                },
-                new QuestionVariant
-                {
-                    Id = 5,
-                    Description = "hgdgh",
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question1Variant1,
                     IsCorrect = true,
                     QuestionId = 1,
                 },
@@ -260,34 +298,460 @@ namespace LearnElectronics.Database
                 new QuestionVariant
                 {
                     Id = 2,
-                    Description = "dfgfd",
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question1Variant2,
+                    IsCorrect = true,
+                    QuestionId = 1,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 3,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question1Variant3,
+                    IsCorrect = false,
+                    QuestionId = 1,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 4,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question1Variant4,
+                    IsCorrect = false,
+                    QuestionId = 1,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 5,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question2Variant1,
+                    IsCorrect = true,
+                    QuestionId = 2,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 6,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question2Variant2,
                     IsCorrect = false,
                     QuestionId = 2,
                 },
 
                 new QuestionVariant
                 {
-                    Id = 3,
-                    Description = "dfgfd",
+                    Id = 7,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question2Variant3,
+                    IsCorrect = false,
+                    QuestionId = 2,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 8,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question3Variant1,
                     IsCorrect = true,
                     QuestionId = 3,
                 },
 
                 new QuestionVariant
                 {
-                    Id = 6,
-                    Description = "hjhkhuj",
+                    Id = 9,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question3Variant2,
+                    IsCorrect = false,
+                    QuestionId = 3,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 10,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question3Variant3,
+                    IsCorrect = false,
+                    QuestionId = 3,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 11,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question3Variant4,
+                    IsCorrect = false,
+                    QuestionId = 3,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 12,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question4Variant1,
+                    IsCorrect = true,
+                    QuestionId = 4,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 13,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question4Variant2,
                     IsCorrect = false,
                     QuestionId = 4,
                 },
 
                 new QuestionVariant
                 {
-                    Id = 7,
-                    Description = "adadf",
-                    IsCorrect = true,
+                    Id = 14,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question4Variant3,
+                    IsCorrect = false,
                     QuestionId = 4,
                 },
+
+                new QuestionVariant
+                {
+                    Id = 15,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question5Variant1,
+                    IsCorrect = true,
+                    QuestionId = 5,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 16,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question5Variant2,
+                    IsCorrect = false,
+                    QuestionId = 5,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 17,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question5Variant3,
+                    IsCorrect = false,
+                    QuestionId = 5,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 18,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question6Variant1,
+                    IsCorrect = true,
+                    QuestionId = 6,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 19,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question6Variant2,
+                    IsCorrect = false,
+                    QuestionId = 6,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 20,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question6Variant3,
+                    IsCorrect = false,
+                    QuestionId = 6,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 21,
+                    Description = Recources.LearnElectronics_Database_ru_Test1_QuestionVariants.Question6Variant4,
+                    IsCorrect = false,
+                    QuestionId = 6,
+                },
+
+
+                new QuestionVariant
+                {
+                    Id = 22,
+                    Description = Recources.LearnElectronics_Database_ru_Test2_QuestionVariants.Question1Variant1,
+                    IsCorrect = true,
+                    QuestionId = 7,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 23,
+                    Description = Recources.LearnElectronics_Database_ru_Test2_QuestionVariants.Question1Variant2,
+                    IsCorrect = true,
+                    QuestionId = 7,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 24,
+                    Description = Recources.LearnElectronics_Database_ru_Test2_QuestionVariants.Question1Variant3,
+                    IsCorrect = true,
+                    QuestionId = 7,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 25,
+                    Description = Recources.LearnElectronics_Database_ru_Test2_QuestionVariants.Question1Variant4,
+                    IsCorrect = false,
+                    QuestionId = 7,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 26,
+                    Description = Recources.LearnElectronics_Database_ru_Test2_QuestionVariants.Question2Variant1,
+                    IsCorrect = true,
+                    QuestionId = 8,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 27,
+                    Description = Recources.LearnElectronics_Database_ru_Test2_QuestionVariants.Question2Variant2,
+                    IsCorrect = false,
+                    QuestionId = 8,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 28,
+                    Description = Recources.LearnElectronics_Database_ru_Test2_QuestionVariants.Question2Variant3,
+                    IsCorrect = false,
+                    QuestionId = 8,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 29,
+                    Description = Recources.LearnElectronics_Database_ru_Test2_QuestionVariants.Question3Variant1,
+                    IsCorrect = true,
+                    QuestionId = 9,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 30,
+                    Description = Recources.LearnElectronics_Database_ru_Test2_QuestionVariants.Question3Variant2,
+                    IsCorrect = false,
+                    QuestionId = 9,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 31,
+                    Description = Recources.LearnElectronics_Database_ru_Test2_QuestionVariants.Question3Variant3,
+                    IsCorrect = false,
+                    QuestionId = 9,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 32,
+                    Description = Recources.LearnElectronics_Database_ru_Test3_QuestionVariants.Question1Variant1,
+                    IsCorrect = true,
+                    QuestionId = 10,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 33,
+                    Description = Recources.LearnElectronics_Database_ru_Test3_QuestionVariants.Question1Variant2,
+                    IsCorrect = false,
+                    QuestionId = 10,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 34,
+                    Description = Recources.LearnElectronics_Database_ru_Test3_QuestionVariants.Question1Variant3,
+                    IsCorrect = false,
+                    QuestionId = 10,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 35,
+                    Description = Recources.LearnElectronics_Database_ru_Test3_QuestionVariants.Question2Variant1,
+                    IsCorrect = true,
+                    QuestionId = 11,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 36,
+                    Description = Recources.LearnElectronics_Database_ru_Test3_QuestionVariants.Question2Variant2,
+                    IsCorrect = false,
+                    QuestionId = 11,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 37,
+                    Description = Recources.LearnElectronics_Database_ru_Test3_QuestionVariants.Question2Variant3,
+                    IsCorrect = false,
+                    QuestionId = 11,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 38,
+                    Description = Recources.LearnElectronics_Database_ru_Test3_QuestionVariants.Question3Variant1,
+                    IsCorrect = true,
+                    QuestionId = 12,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 39,
+                    Description = Recources.LearnElectronics_Database_ru_Test3_QuestionVariants.Question3Variant2,
+                    IsCorrect = false,
+                    QuestionId = 12,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 40,
+                    Description = Recources.LearnElectronics_Database_ru_Test3_QuestionVariants.Question3Variant3,
+                    IsCorrect = false,
+                    QuestionId = 12,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 41,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_QuestionVariants.Question1Variant1,
+                    IsCorrect = true,
+                    QuestionId = 13,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 42,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_QuestionVariants.Question1Variant2,
+                    IsCorrect = false,
+                    QuestionId = 13,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 43,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_QuestionVariants.Question1Variant3,
+                    IsCorrect = false,
+                    QuestionId = 13,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 44,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_QuestionVariants.Question2Variant1,
+                    IsCorrect = true,
+                    QuestionId = 14,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 45,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_QuestionVariants.Question2Variant2,
+                    IsCorrect = false,
+                    QuestionId = 14,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 46,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_QuestionVariants.Question2Variant3,
+                    IsCorrect = false,
+                    QuestionId = 14,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 47,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_QuestionVariants.Question3Variant1,
+                    IsCorrect = true,
+                    QuestionId = 15,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 48,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_QuestionVariants.Question3Variant2,
+                    IsCorrect = true,
+                    QuestionId = 15,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 49,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_QuestionVariants.Question3Variant3,
+                    IsCorrect = true,
+                    QuestionId = 15,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 50,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_QuestionVariants.Question4Variant1,
+                    IsCorrect = true,
+                    QuestionId = 16,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 51,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_QuestionVariants.Question4Variant2,
+                    IsCorrect = false,
+                    QuestionId = 16,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 52,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_QuestionVariants.Question4Variant3,
+                    IsCorrect = false,
+                    QuestionId = 16,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 53,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_QuestionVariants.Question5Variant1,
+                    IsCorrect = true,
+                    QuestionId = 17,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 54,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_QuestionVariants.Question5Variant2,
+                    IsCorrect = false,
+                    QuestionId = 17,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 55,
+                    Description = Recources.LearnElectronics_Database_ru_Test4_QuestionVariants.Question5Variant3,
+                    IsCorrect = false,
+                    QuestionId = 17,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 56,
+                    Description = Recources.LearnElectronics_Database_ru_Test5_QuestionVariants.Question1Variant1,
+                    IsCorrect = true,
+                    QuestionId = 18,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 57,
+                    Description = Recources.LearnElectronics_Database_ru_Test5_QuestionVariants.Question1Variant2,
+                    IsCorrect = false,
+                    QuestionId = 18,
+                },
+
+                new QuestionVariant
+                {
+                    Id = 58,
+                    Description = Recources.LearnElectronics_Database_ru_Test5_QuestionVariants.Question1Variant3,
+                    IsCorrect = false,
+                    QuestionId = 18,
+                },
+
             };
 
             var completedUserLectures = new CompletedLecture[]
@@ -315,53 +779,9 @@ namespace LearnElectronics.Database
 
             };
 
-            var likes = new Like[]
-            {
-                new Like
-                {
-                    Id = 1, 
-                    UserId = 1,
-                    CommentId = 1,
-                },
+            var likes = new Like[]{};
 
-                new Like
-                {
-                    Id = 2,
-                    UserId = 2,
-                    CommentId = 2,
-                },
-
-                new Like
-                {
-                    Id = 3,
-                    UserId = 3,
-                    CommentId = 3,
-                },
-            };
-
-            var dislikes = new Dislike[]
-            {
-                new Dislike
-                {
-                    Id = 1,
-                    UserId = 1,
-                    CommentId = 1,
-                },
-
-                new Dislike
-                {
-                    Id = 2,
-                    UserId = 2,
-                    CommentId = 2,
-                },
-
-                new Dislike
-                {
-                    Id = 3,
-                    UserId = 3,
-                    CommentId = 3,
-                },
-            };
+            var dislikes = new Dislike[]{};
 
             var users = new User[]
             {
@@ -371,15 +791,6 @@ namespace LearnElectronics.Database
                     UserName = "Roman Pushtuk",
                     Login = "World Destroyer",
                     Password = Hashing.HashValue("123"),
-                    RegistrationData = DateTime.Now
-                },
-
-                new User
-                {
-                    Id = 2,
-                    UserName = "Someone",
-                    Login = "world",
-                    Password = Hashing.HashValue("1234"),
                     RegistrationData = DateTime.Now
                 },
 

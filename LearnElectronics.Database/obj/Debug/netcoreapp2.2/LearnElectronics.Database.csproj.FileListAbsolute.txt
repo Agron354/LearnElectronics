@@ -18,3 +18,13 @@ D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.
 D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.Recources.LearnElectronics.Database.ru.Article4.resources
 D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.Recources.LearnElectronics.Database.ru.Article5.resources
 D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.csproj.GenerateResource.cache
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.Recources.LearnElectronics.Database.ru.Test1.Questions.resources
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.Recources.LearnElectronics.Database.ru.Test1.QuestionVariants.resources
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.Recources.LearnElectronics.Database.ru.Test2.Questions.resources
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.Recources.LearnElectronics.Database.ru.Test2.QuestionVariants.resources
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.Recources.LearnElectronics.Database.ru.Test3.Questions.resources
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.Recources.LearnElectronics.Database.ru.Test3.QuestionVariants.resources
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.Recources.LearnElectronics.Database.ru.Test4.Questions.resources
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.Recources.LearnElectronics.Database.ru.Test4.QuestionVariants.resources
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.Recources.LearnElectronics.Database.ru.Test5.Questions.resources
+D:\Diploma 2.0\LearnElectronics\LearnElectronics.Database\obj\Debug\netcoreapp2.2\LearnElectronics.Database.Recources.LearnElectronics.Database.ru.Test5.QuestionVariants.resources

@@ -42,6 +42,61 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>LearnElectronics.Database.ru.Article5.resx</DependentUpon>
     </Compile>
+    <Compile Update="Recources\LearnElectronics.Database.ru.Test1.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LearnElectronics.Database.ru.Test1.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Recources\LearnElectronics.Database.ru.Test1.Questions.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LearnElectronics.Database.ru.Test1.Questions.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Recources\LearnElectronics.Database.ru.Test1.QuestionVariants.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LearnElectronics.Database.ru.Test1.QuestionVariants.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Recources\LearnElectronics.Database.ru.Test2.Questions.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LearnElectronics.Database.ru.Test2.Questions.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Recources\LearnElectronics.Database.ru.Test2.QuestionVariants.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LearnElectronics.Database.ru.Test2.QuestionVariants.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Recources\LearnElectronics.Database.ru.Test3.Questions.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LearnElectronics.Database.ru.Test3.Questions.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Recources\LearnElectronics.Database.ru.Test3.QuestionVariants.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LearnElectronics.Database.ru.Test3.QuestionVariants.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Recources\LearnElectronics.Database.ru.Test4.Questions.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LearnElectronics.Database.ru.Test4.Questions.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Recources\LearnElectronics.Database.ru.Test4.QuestionVariants.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LearnElectronics.Database.ru.Test4.QuestionVariants.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Recources\LearnElectronics.Database.ru.Test5.Questions.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LearnElectronics.Database.ru.Test5.Questions.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Recources\LearnElectronics.Database.ru.Test5.QuestionVariants.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LearnElectronics.Database.ru.Test5.QuestionVariants.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 
@@ -65,6 +120,50 @@
     <EmbeddedResource Update="Recources\LearnElectronics.Database.ru.Article5.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>LearnElectronics.Database.ru.Article5.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Recources\LearnElectronics.Database.ru.Test1.Questions.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LearnElectronics.Database.ru.Test1.Questions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Recources\LearnElectronics.Database.ru.Test1.QuestionVariants.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LearnElectronics.Database.ru.Test1.QuestionVariants.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Recources\LearnElectronics.Database.ru.Test1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LearnElectronics.Database.ru.Test1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Recources\LearnElectronics.Database.ru.Test2.Questions.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LearnElectronics.Database.ru.Test2.Questions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Recources\LearnElectronics.Database.ru.Test2.QuestionVariants.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LearnElectronics.Database.ru.Test2.QuestionVariants.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Recources\LearnElectronics.Database.ru.Test3.Questions.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LearnElectronics.Database.ru.Test3.Questions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Recources\LearnElectronics.Database.ru.Test3.QuestionVariants.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LearnElectronics.Database.ru.Test3.QuestionVariants.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Recources\LearnElectronics.Database.ru.Test4.Questions.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LearnElectronics.Database.ru.Test4.Questions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Recources\LearnElectronics.Database.ru.Test4.QuestionVariants.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LearnElectronics.Database.ru.Test4.QuestionVariants.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Recources\LearnElectronics.Database.ru.Test5.Questions.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LearnElectronics.Database.ru.Test5.Questions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Recources\LearnElectronics.Database.ru.Test5.QuestionVariants.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LearnElectronics.Database.ru.Test5.QuestionVariants.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 
