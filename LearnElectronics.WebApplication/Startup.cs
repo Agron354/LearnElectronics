@@ -24,7 +24,7 @@ namespace LearnElectronics.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.InitializeServices();
-            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer("Server=tcp:learnelectronics.database.windows.net,1433;Initial Catalog=LearnElectronics;Persist Security Info=False;User ID=Agron354;Password=LoLkan123121;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
+            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer("Server=" + Environment.MachineName + ";Database=LearnElectronics;Integrated Security=True;"));
             services.AddCors(options =>
             {
                 options.AddPolicy("CORS", builder => builder.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
