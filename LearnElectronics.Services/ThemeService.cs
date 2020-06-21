@@ -29,13 +29,13 @@ namespace LearnElectronics.Services
             {
                 var currentTheme = _mapper.Map<ThemeModel>(theme);
                 var themeLectures = await _applicationContext.Lectures.Where(lec => lec.ThemeId == theme.Id).ToListAsync();
-                
+                currentTheme.LigthLectures = new List<LigthLectureModel>();
+
                 foreach (var lecture in themeLectures)
                 {
                     var lightLecture = _mapper.Map<LigthLectureModel>(lecture);
                     var isLectureCompleted = await _applicationContext.CompletedUserLectures.FirstOrDefaultAsync(lec => lec.LectureId == lecture.Id && lec.UserId == userId);
                     lightLecture.IsCompleted = userId == 0 ? false : isLectureCompleted != null;
-                    currentTheme.LigthLectures = new List<LigthLectureModel>();
                     currentTheme.LigthLectures.Add(lightLecture);
                 }
                 themes.Add(currentTheme);
