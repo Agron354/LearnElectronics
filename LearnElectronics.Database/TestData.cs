@@ -12,7 +12,6 @@ namespace LearnElectronics.Database
         public Test[] Tests { get; set; }
         public Question[] Questions { get; set; }
         public QuestionVariant[] QuestionVariants { get; set; }
-        public CompletedLecture[] CompletedUserLectures { get; set; }
         public Like[] Likes { get; set; }
         public Dislike[] Dislikes { get; set; }
         public User[] Users { get; set; }
@@ -29,7 +28,7 @@ namespace LearnElectronics.Database
                     Title = "Реальный мир и в электричество",
                     Description = "В данном разделе даются базовые понятия о том, что такое реальный мир, его важнейших понятиях." +
                     "Изучив данный раздел, можно получить целостную базовую модель, от которой можно опираться, изучая дальнейшие темы курса." +
-                    "Давайте же погрузимся в удивительный мир электроники"
+                    "Давайте же погрузимся в удивительный мир электроники!"
                 },
             };
 
@@ -754,31 +753,6 @@ namespace LearnElectronics.Database
 
             };
 
-            var completedUserLectures = new CompletedLecture[]
-            {
-                new CompletedLecture
-                {
-                    Id = 1,
-                    LectureId = 1,
-                    UserId = 1,
-                },
-
-                new CompletedLecture
-                {
-                    Id = 2,
-                    LectureId = 2,
-                    UserId = 2,
-                },
-
-                new CompletedLecture
-                {
-                    Id = 3,
-                    LectureId = 3,
-                    UserId = 3,
-                },
-
-            };
-
             var likes = new Like[]{};
 
             var dislikes = new Dislike[]{};
@@ -789,8 +763,8 @@ namespace LearnElectronics.Database
                 {
                     Id = 1,
                     UserName = "Roman Pushtuk",
-                    Login = "World Destroyer",
-                    Password = Hashing.HashValue("123"),
+                    Login = "medok@mail.com",
+                    Password = Hashing.HashValue("lovejslang"),
                     RegistrationData = DateTime.Now
                 },
 
@@ -798,8 +772,8 @@ namespace LearnElectronics.Database
                 {
                     Id = 3,
                     UserName = "Egor Borisenko",
-                    Login = "World Keeper",
-                    Password = Hashing.HashValue("12345"),
+                    Login = "agron.354@gmail.com",
+                    Password = Hashing.HashValue("loveclang"),
                     RegistrationData = DateTime.Now
                 },
             };
@@ -812,7 +786,6 @@ namespace LearnElectronics.Database
                 Tests = tests,
                 Questions = questions,
                 QuestionVariants = questionVariants,
-                CompletedUserLectures = completedUserLectures,
                 Likes = likes,
                 Dislikes = dislikes,
                 Users = users

@@ -34,7 +34,6 @@ namespace LearnElectronics.Database
             modelBuilder.Entity<Test>().HasData(testData.Tests);
             modelBuilder.Entity<Question>().HasData(testData.Questions);
             modelBuilder.Entity<QuestionVariant>().HasData(testData.QuestionVariants);
-            modelBuilder.Entity<CompletedLecture>().HasData(testData.CompletedUserLectures);
             modelBuilder.Entity<Like>().HasData(testData.Likes);
             modelBuilder.Entity<Dislike>().HasData(testData.Dislikes);
             modelBuilder.Entity<User>().HasData(testData.Users);

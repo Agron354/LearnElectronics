@@ -29,7 +29,7 @@ namespace LearnElectronics.Services
             var completedUserTests = await _applicationContext.CompletedUserLectures.Where(te => te.UserId == userId).ToListAsync();
             userAccount.CompletedTestCount = completedUserTests.Count;
             var totalTests = await _applicationContext.CompletedUserLectures.ToListAsync();
-            userAccount.LectureProgress = completedUserTests.Count * 100 / totalTests.Count;
+            userAccount.LectureProgress = completedUserTests.Count != 0 ? completedUserTests.Count * 100 / totalTests.Count : 0;
             return userAccount;
         }
 
