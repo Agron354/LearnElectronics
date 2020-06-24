@@ -24,7 +24,7 @@ namespace LearnElectronics.Services
 
         public static async Task<UserAccountModel> GetUserActivity(UserAccountModel userAccount, int userId, ApplicationContext _applicationContext)
         {
-            var userCommments = await _applicationContext.Comments.Where(us => us.Id == userId).ToListAsync();
+            var userCommments = await _applicationContext.Comments.Where(us => us.UserId == userId).ToListAsync();
             userAccount.CommentCount = userCommments.Count;
             var completedUserTests = await _applicationContext.CompletedUserLectures.Where(te => te.UserId == userId).ToListAsync();
             userAccount.CompletedTestCount = completedUserTests.Count;
