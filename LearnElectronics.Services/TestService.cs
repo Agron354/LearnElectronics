@@ -36,7 +36,7 @@ namespace LearnElectronics.Services
                 var correctAnswerVariants = "";
                 foreach (var answer in correctAnswers)
                 {
-                    correctAnswerVariants += answer != correctAnswers.Last() ? answer.Description + "," : answer.Description;
+                    correctAnswerVariants += answer != correctAnswers.Last() ? answer.Description + "&" : answer.Description;
                 }
  
                 correctAnswerList.Add(correctAnswerVariants);
